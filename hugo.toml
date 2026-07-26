@@ -2,3 +2,6 @@ baseURL = 'https://localpoolcare.com.au/'
 languageCode = 'en-us'
 title = 'Local Pool Care'
 theme = 'localpoolcare'
+
+[markup.goldmark.renderer]
+unsafe = true
