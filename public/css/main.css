@@ -64,3 +64,45 @@ a {
   color: #00e;
   text-decoration: none;
 }
+
+.contact-form {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.form-row.two-up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-row input,
+.form-row textarea,
+.form-actions button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.8rem;
+}
+
+.form-row textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-actions {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .form-row.two-up {
+    grid-template-columns: 1fr;
+  }
+}
