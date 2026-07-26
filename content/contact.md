@@ -6,6 +6,6 @@ title = 'Contact'
 weight = 30
 +++
 
-Please get in touch using the form below.
+Need help with your pool? Send us a message and we’ll get back to you soon.
 
 {{< contact_form >}}
