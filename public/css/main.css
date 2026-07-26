@@ -2,6 +2,11 @@ html, body {
   height: 100%;
 }
 
+:root {
+  --page-max-width: 900px;
+  --page-side-padding: clamp(1rem, 3vw, 3rem);
+}
+
 body {
   color: #222;
   font-family: sans-serif;
@@ -15,8 +20,11 @@ body {
 header,
 main,
 footer {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  width: min(100%, var(--page-max-width));
+  margin: 0 auto;
+  padding-left: var(--page-side-padding);
+  padding-right: var(--page-side-padding);
+  box-sizing: border-box;
 }
 
 main {
@@ -67,8 +75,8 @@ a {
 
 .contact-form {
   width: 100%;
-  max-width: 860px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
 }
 
 .form-row {
