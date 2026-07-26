@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://localpoolcare.com.au/'
 languageCode = 'en-us'
-title = 'My New Hugo Project'
+title = 'Local Pool Care'
 theme = 'localpoolcare'
