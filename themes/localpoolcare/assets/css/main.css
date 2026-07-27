@@ -5,10 +5,19 @@ html, body {
 :root {
   --page-max-width: 900px;
   --page-side-padding: clamp(1rem, 3vw, 3rem);
+  --bg: #f5f8fc;
+  --surface: #ffffff;
+  --surface-alt: #eaf3ff;
+  --text: #1f3550;
+  --muted: #5d7188;
+  --primary: #2f6fe3;
+  --primary-strong: #2458b1;
+  --border: #cad9ea;
 }
 
 body {
-  color: #222;
+  background: var(--bg);
+  color: var(--text);
   font-family: sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -17,23 +26,33 @@ body {
   min-height: 100vh;
 }
 
-header,
-main,
-footer {
+main {
   width: min(100%, var(--page-max-width));
   margin: 0 auto;
   padding-left: var(--page-side-padding);
   padding-right: var(--page-side-padding);
   box-sizing: border-box;
-}
-
-main {
   flex: 1;
 }
 
+header,
+footer {
+  width: 100%;
+}
+
 header {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-alt);
   margin-bottom: 1rem;
+}
+
+.site-header-inner,
+.site-footer-inner {
+  width: min(100%, var(--page-max-width));
+  margin: 0 auto;
+  padding-left: var(--page-side-padding);
+  padding-right: var(--page-side-padding);
+  box-sizing: border-box;
 }
 
 .site-header-row {
@@ -62,15 +81,24 @@ header {
 }
 
 footer {
-  border-top: 1px solid #222;
+  border-top: 1px solid var(--border);
+  background: var(--surface-alt);
   margin-top: 1rem;
+}
+
+.site-footer-inner {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 a {
-  color: #00e;
+  color: var(--primary);
   text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary-strong);
 }
 
 .contact-form {
@@ -98,6 +126,19 @@ a {
   width: 100%;
   box-sizing: border-box;
   padding: 0.7rem 0.8rem;
+}
+
+.form-row input,
+.form-row textarea {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.form-actions button {
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid var(--primary);
 }
 
 .form-row textarea {
